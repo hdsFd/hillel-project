@@ -1,6 +1,7 @@
 .about-tabs {
     display: grid;
     grid-gap: 30px;
+    padding-top: 60px;
     &__switch {
         display: flex;
         list-style: none;
@@ -61,6 +62,7 @@
 @media (min-width: 768px) {
     .about-tabs {
         grid-gap: 60px;
+        padding-top: 90px;
         &__switch {
             padding-bottom: 60px;
             &-item {
