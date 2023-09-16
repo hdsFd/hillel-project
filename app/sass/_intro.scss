@@ -1,0 +1,17 @@
+.intro {
+    padding-top: 132px;
+    &__title {
+        padding-bottom: 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    .intro {
+        padding-top: 280px;
+    }
+}
+@media (min-width: 1024px) {
+    .intro {
+        padding-top: 0;
+    }
+}

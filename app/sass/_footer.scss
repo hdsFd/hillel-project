@@ -1,0 +1,124 @@
+.footer {
+    padding-bottom: 30px;
+    background-color: $grey-bg;
+    &__inner {
+        text-align: center;
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: $grey-separator;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__adress {
+        font-size: 16px;
+        line-height: normal;
+        color: $main-regular;
+        padding-bottom: 10px;
+    }
+    &__map-link {
+        color: $active-regular;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition-duration: 300ms;
+        transition-property: color;
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    &__contacts {
+        padding-top: 21px;
+        padding-bottom: 30px;
+        display: grid;
+        grid-gap: 10px;
+    }
+
+    &__fb:hover &__fb-svg .icon-color {
+        fill: $accent;
+    }
+
+    &__phone {
+        color: $main-alt;
+    }
+    &__mail {
+        color: $active-regular;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: normal;
+        transition-duration: 300ms;
+        transition-property: color;
+        &:hover {
+            color: $accent;
+        }
+    }
+    &__copy {
+        font-size: 16px;
+        line-height: normal;
+        color: $grey-text;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        &__inner {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__adress-box {
+            display: flex;
+        }
+        &__adress {
+            padding-bottom: 0;
+            padding-right: 10px;
+        }
+        &__contacts {
+            grid-auto-columns: max-content;
+            grid-auto-flow: column;
+            justify-items: start;
+            order: 1;
+            width: 100%;
+            padding-bottom: 0;
+        }
+        &__fb-svg .icon-color {
+            transition-duration: 300ms;
+            transition-property: fill;
+        }
+        &__fb:hover &__fb-svg .icon-color {
+            fill: #f0145a;
+        }
+        & .dot-separ::before {
+            background-color: $grey-text;
+            margin-right: 10px;
+        }
+        &__copy {
+            margin-left: auto;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .footer_content-center {
+        .footer__inner {
+            justify-content: center;
+        }
+        .footer__adress-box {
+            display: flex;
+            justify-content: center;
+        }
+        .footer__contacts {
+            order: 0;
+            justify-content: center;
+        }
+        .footer__copy {
+            margin-left: 0;
+            padding-top: 30px;
+        }
+    }
+}

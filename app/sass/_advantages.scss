@@ -1,0 +1,32 @@
+.advantages {
+    border-left: 4px solid $grey-separator;
+    &__items {
+        padding-left: 30px;
+    }
+    &__item:not(:last-child) {
+        padding-bottom: 40px;
+    }
+    &__item:nth-child(1) &__item-title::before {
+        background-image: url("../../img/flag.svg");
+    }
+    &__item:nth-child(2) &__item-title::before {
+        background-image: url("../../img/case.svg");
+    }
+    &__item:nth-child(3) &__item-title::before {
+        background-image: url("../../img/star.svg");
+    }
+    &__item-title {
+        font-size: 36px;
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+        &::before {
+            content: "";
+            width: 32px;
+            height: 32px;
+            margin-right: 8px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.text {
+    color: $basic-black;
+    font-size: 16px;
+    line-height: 26px;
+    &_l {
+        font-size: 19px;
+        line-height: 30px;
+    }
+    &_s {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    &_white {
+        color: $basic-white;
+    }
+    &_mt-20 {
+        margin-top: 20px;
+    }
+}

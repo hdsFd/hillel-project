@@ -1,0 +1,28 @@
+.achievements {
+    background-color: $grey-bg;
+    &__inner {
+        padding: 30px 0px;
+        text-align: center;
+        margin: 0 30px;
+    }
+    &__item-wrap {
+        padding: 30px 20px;
+        min-width: 172px;
+    }
+    &__item {
+        display: flex;
+        justify-content: center;
+        padding: 25px 0;
+        border-radius: 12px;
+        background-color: $basic-white;
+    }
+    &__img {
+        height: 40px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .achievements__img {
+        height: 60px;
+    }
+}

@@ -1,0 +1,17 @@
+.quality {
+    padding-bottom: 60px;
+    &__title {
+        padding-top: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .quality {
+        display: grid;
+        grid-template-columns: 1fr 362px;
+        grid-gap: 60px;
+        &__title {
+            padding-top: 0;
+        }
+    }
+}

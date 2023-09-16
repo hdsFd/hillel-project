@@ -1,0 +1,119 @@
+.main-intro {
+    padding-top: 231px;
+    padding-bottom: 30px;
+    text-align: center;
+    &__title {
+        color: $basic-white;
+        padding-bottom: 158px;
+    }
+    &__btn {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 42px;
+        height: 42px;
+        border: 2px solid rgba($basic-white, 0.5);
+        border-radius: 50%;
+        transition-duration: 300ms;
+        transition-property: border-color;
+
+        &::before,
+        &::after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            transform: rotate(45deg);
+            border-right: 2px solid $basic-white;
+            border-bottom: 2px solid $basic-white;
+            margin-top: -6px;
+            transition-duration: 300ms;
+            transition-property: border-color;
+        }
+        &::before {
+            animation-name: arrow2;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+        }
+        &::after {
+            position: absolute;
+            animation-name: arrow;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+        }
+        &:hover {
+            border-color: rgba($accent, 0.5);
+            &::before,
+            &::after {
+                border-color: $accent;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .main-intro {
+        padding-top: 489px;
+        &__title {
+            padding-bottom: 417px;
+        }
+        &__btn::before,
+        &__btn::after {
+            animation-iteration-count: 0;
+        }
+        &__btn:hover {
+            &::before,
+            &::after {
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-intro {
+        padding-top: 361px;
+        &__title {
+            padding-bottom: 289px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .main-intro {
+        padding-top: 376px;
+        &__title {
+            padding-bottom: 305px;
+        }
+    }
+}
+
+@keyframes arrow {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(45deg) translate(6px, 6px) scale(1.1);
+        opacity: 0;
+    }
+}
+
+@keyframes arrow2 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(45deg) translate(6px, 6px) scale(1.1);
+        opacity: 0;
+    }
+}

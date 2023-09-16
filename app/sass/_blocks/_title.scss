@@ -1,0 +1,38 @@
+.title {
+    font-weight: 700;
+    line-height: normal;
+    &_hero {
+        font-size: 38px;
+    }
+    &_lg {
+        font-size: 30px;
+    }
+    &_md {
+        font-size: 22px;
+    }
+    &_s {
+        font-size: 20px;
+    }
+    &_xs {
+        font-size: 16px;
+    }
+    &_caps {
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    &_red-gradient {
+        background: $gradient-red-text;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    @media (min-width: 768px) {
+        &_lg {
+            font-size: 38px;
+        }
+        &_s {
+            font-size: 30px;
+        }
+    }
+}

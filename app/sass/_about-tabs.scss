@@ -1,0 +1,101 @@
+.about-tabs {
+    display: grid;
+    grid-gap: 30px;
+    &__switch {
+        display: flex;
+        list-style: none;
+        padding-left: 0;
+        overflow: auto;
+        border-bottom: 4px solid rgba($basic-white, 0.3);
+        padding-bottom: 30px;
+        gap: 30px;
+        &::-webkit-scrollbar {
+            height: 0;
+            background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba($accent, 0.4);
+        }
+        &-item {
+            cursor: pointer;
+            color: $grey-text;
+            font-family: inherit;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: normal;
+            white-space: nowrap;
+            border: none;
+            background: transparent;
+            padding: 0;
+            transition-duration: 300ms;
+            transition-property: color;
+            &.active {
+                background: $gradient-text-red-reversed;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                cursor: unset;
+            }
+            &:not(.active):hover {
+              color: rgba($accent, 0.4);
+            }
+        }
+    }
+    &__content {
+        display: none;
+        &.active {
+            display: block;
+        }
+        &-title {
+            color: $basic-white;
+            padding-bottom: 30px;
+        }
+        &-desc {
+            color: $basic-white;
+            font-size: 19px;
+            line-height: 30px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .about-tabs {
+        grid-gap: 60px;
+        &__switch {
+            padding-bottom: 60px;
+            &-item {
+                font-size: 38px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .about-tabs {
+        grid-template-columns: min-content 1fr;
+        &__switch {
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding-bottom: 0;
+            padding-right: 60px;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            border: none;
+            border-right: 4px solid rgba($basic-white, 0.3);
+        }
+        &__content {
+            padding: 9px 0;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .about-tabs {
+        max-width: 1080px;
+        margin: 0 auto;
+        &__content {
+            padding: 43px 0;
+        }
+    }
+}

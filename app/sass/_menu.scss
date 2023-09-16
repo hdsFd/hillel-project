@@ -1,0 +1,129 @@
+.menu {
+    position: absolute;
+    right: 15px;
+    bottom: 14px;
+    transition-duration: 500ms;
+    transition-property: bottom;
+}
+
+.menu__list {
+    display: grid;
+    grid-gap: 15px;
+    visibility: hidden;
+    padding: 12px;
+    margin-top: 14px;
+    list-style: none;
+    position: fixed;
+    right: -100vw;
+    width: 100vw;
+    flex-direction: column;
+    transition-duration: 300ms;
+    transition-property: right, visibility, padding-bottom;
+    &.open {
+        right: 0;
+        visibility: visible;
+        padding-bottom: 100%;
+        background-color: rgba($basic-white, 0.7);
+    }
+}
+
+.menu__link {
+    color: $active-regular;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    padding: 7px 0;
+    background-color: $grey-bg;
+    display: flex;
+    justify-content: center;
+    border-radius: 12px;
+    transition-duration: 300ms;
+    transition-property: background-color, color, border-color;
+    &:hover,
+    &:active {
+        background-color: $grey-separator;
+    }
+    &.active {
+        color: $accent;
+    }
+}
+
+.menu__btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    &-hamb,
+    &-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition-duration: 300ms;
+        transition-property: opacity;
+    }
+    &-close {
+        opacity: 0;
+    }
+    &:active {
+        background-color: $grey-separator;
+    }
+    &.active {
+        .menu__btn-hamb {
+            opacity: 0;
+        }
+        .menu__btn-close {
+            opacity: 1;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .menu {
+        display: flex;
+        &__inner {
+            position: static;
+        }
+    }
+    .menu__btn {
+        display: none;
+    }
+    .menu__list {
+        grid-auto-columns: max-content;
+        grid-auto-flow: column;
+        flex-direction: row;
+        padding: 0;
+        position: static;
+        visibility: visible;
+        width: 100%;
+    }
+
+    .menu__link {
+        padding: 0 0 3px;
+        background: none;
+        border-bottom: 2px solid transparent;
+        border-radius: 0;
+        font-size: 16px;
+        &_white:not(.active) {
+            color: $basic-white;
+        }
+        &.active {
+            border-color: $accent;
+        }
+        &:hover {
+            background: none;
+            border-color: inherit;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu {
+        justify-self: end;
+        &__list {
+            margin-top: 0;
+        }
+    }
+}

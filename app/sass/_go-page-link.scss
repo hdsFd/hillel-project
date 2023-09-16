@@ -1,0 +1,42 @@
+.go-page-link {
+    display: inline-flex;
+    align-items: center;
+    color: $active-regular;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition-duration: 300ms;
+    transition-property: color, transform;
+    &::after {
+        content: "";
+        display: block;
+        width: 7px;
+        height: 7px;
+        box-sizing: border-box;
+        border-top: 2px solid;
+        border-right: 2px solid;
+        transform: rotate(45deg);
+        transition-duration: 300ms;
+        transition-property: transform;
+    }
+    &:hover {
+        color: $accent;
+        &::after {
+            transform: rotate(45deg) translate(4px, -4px) scale(1.2);
+        }
+    }
+}
+
+// @keyframes arrow-small {
+//     0% {
+//     }
+//     50% {
+//         transform: rotate(45deg) translate(4px, -4px) scale(1.2);
+
+//     }
+//     100% {
+//         transform: rotate(45deg) translate(2px, -2px) scale(1);
+//     }
+// }

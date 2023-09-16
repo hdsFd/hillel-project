@@ -1,0 +1,85 @@
+.services {
+    display: grid;
+    grid-gap: 30px;
+    padding-bottom: 60px;
+
+    &__go-page-link::after {
+        transform: rotate(45deg) translate(2px, -2px);
+    }
+    &__title {
+        padding-top: 8px;
+    }
+    &__cards {
+        display: grid;
+        gap: 30px;
+    }
+    &__card {
+        &-link {
+            color: $active-regular;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: normal;
+            display: inline-flex;
+            margin-bottom: 15px;
+            margin-top: 122px;
+            position: relative;
+            transition-duration: 300ms;
+            transition-property: color;
+            &::before {
+                content: "";
+                box-sizing: border-box;
+                width: 92px;
+                height: 92px;
+                border-radius: 24px;
+                padding: 14px;
+                position: absolute;
+                bottom: calc(100% + 30px);
+                background-color: $basic-white;
+                background-repeat: no-repeat;
+                background-position: center;
+                transition-duration: 300ms;
+                transition-property: transform;
+            }
+            &:hover {
+                color: $accent;
+                &::before {
+                    transform: scale(1.1) translateX(10px);
+                }
+            }
+        }
+        &_01 &-link::before {
+            background-image: url("../img/ecommerce.svg");
+        }
+        &_02 &-link::before {
+            background-image: url("../img/support.svg");
+        }
+        &_03 &-link::before {
+            background-image: url("../img/coprorate.svg");
+        }
+        &_04 &-link::before {
+            background-image: url("../img/trust.svg");
+        }
+        &_05 &-link::before {
+            background-image: url("../img/protection.svg");
+        }
+        &_06 &-link::before {
+            background-image: url("../img/court.svg");
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .services {
+        grid-gap: 60px;
+        &__cards {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 60px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .services__cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

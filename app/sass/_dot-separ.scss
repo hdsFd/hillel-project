@@ -1,0 +1,16 @@
+.dot-separ::before {
+    width: 6px;
+    height: 6px;
+    background-color: $grey-separator;
+    border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+    .dot-separ {
+        display: inline-flex;
+        align-items: center;
+        &::before {
+            content: "";
+        }
+    }
+}
