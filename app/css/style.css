@@ -355,11 +355,11 @@ a {
 .logo {
   width: 70px;
   height: 33px;
-  background-image: url("../../img/logo.svg");
+  background-image: url("../img/logo.svg");
   background-repeat: no-repeat;
 }
 .logo_white {
-  background-image: url("../../img/logo_white.svg");
+  background-image: url("../img/logo_white.svg");
 }
 
 .my-dots {
@@ -1847,7 +1847,7 @@ a {
 .achievements {
   background-color: #f5f5fa;
 }
-.achievements__inner {
+.achievements .achievements__inner {
   padding: 30px 40px;
   text-align: center;
 }
