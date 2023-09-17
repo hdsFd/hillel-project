@@ -454,8 +454,8 @@ a {
 .menu__list.open {
   right: 0;
   visibility: visible;
-  padding-bottom: 100%;
-  background-color: rgba(255, 255, 255, 0.7);
+  padding-bottom: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .menu__link {
   color: #24a3ff;
