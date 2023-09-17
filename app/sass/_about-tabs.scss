@@ -38,7 +38,7 @@
                 cursor: unset;
             }
             &:not(.active):hover {
-              color: rgba($accent, 0.4);
+                color: rgba($accent, 0.4);
             }
         }
     }
@@ -75,6 +75,8 @@
 @media (min-width: 1024px) {
     .about-tabs {
         grid-template-columns: min-content 1fr;
+        max-width: 1080px;
+        margin: 0 auto;
         &__switch {
             flex-direction: column;
             align-items: flex-end;
@@ -88,16 +90,7 @@
         }
         &__content {
             padding: 9px 0;
-        }
-    }
-}
-
-@media (min-width: 1200px) {
-    .about-tabs {
-        max-width: 1080px;
-        margin: 0 auto;
-        &__content {
-            padding: 43px 0;
+            align-self: center;
         }
     }
 }

@@ -1,26 +1,18 @@
 .about {
-    display: grid;
-    grid-gap: 30px;
-    &-intro-wrap {
+    &__intro-wrap {
         display: grid;
         grid-gap: 30px;
     }
 }
 
-@media (min-width: 768px) {
-    .about {
-        grid-gap: 60px;
-    }
-}
-
 @media (min-width: 1024px) {
     .about {
-        &-intro-wrap {
+        &__intro-wrap {
             grid-template-columns: 1fr 388px;
             padding-top: 176px;
             align-items: start;
         }
-        &-container {
+        &__container {
             max-width: 1080px;
             margin: 0 auto;
         }
