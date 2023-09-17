@@ -51,6 +51,7 @@
         width: 32px;
         height: 32px;
         position: relative;
+        -webkit-tap-highlight-color: transparent;
         &-hamb,
         &-close {
             position: absolute;

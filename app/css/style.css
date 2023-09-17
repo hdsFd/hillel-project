@@ -489,6 +489,7 @@ a {
   width: 32px;
   height: 32px;
   position: relative;
+  -webkit-tap-highlight-color: transparent;
 }
 .menu__btn-hamb, .menu__btn-close {
   position: absolute;
@@ -1625,6 +1626,7 @@ a {
   padding-bottom: 30px;
   display: grid;
   grid-gap: 10px;
+  justify-items: center;
 }
 .footer__fb:hover .footer__fb-svg .icon-color {
   fill: #f0145a;
