@@ -4023,6 +4023,7 @@ var menu = document.querySelector('.js-menu');
 var menuList = document.querySelector('.js-menu-list');
 var logoBox = document.querySelector('.js-logo-box');
 var phone = document.querySelector('.js-phone');
+var mainHeader = document.querySelector('.js-main-header');
 var header = document.querySelector('.js-header');
 var headerH = header.offsetHeight;
 btn.addEventListener('click', function () {
@@ -4045,8 +4046,15 @@ document.addEventListener('click', function (e) {
   }
 });
 document.addEventListener('scroll', function () {
-  if (scrollY >= headerH) {
+  if (mainHeader !== null) {
+    if (scrollY >= headerH) {
+      mainHeader.classList.add('header_fixed');
+    } else {
+      mainHeader.classList.remove('header_fixed');
+    }
+  } else if (scrollY >= 30) {
     header.classList.add('header_fixed');
+    console.log(headerH);
   } else {
     header.classList.remove('header_fixed');
   }

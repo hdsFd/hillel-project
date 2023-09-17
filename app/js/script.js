@@ -3,6 +3,7 @@ const menu = document.querySelector('.js-menu');
 const menuList = document.querySelector('.js-menu-list');
 const logoBox = document.querySelector('.js-logo-box');
 const phone = document.querySelector('.js-phone');
+const mainHeader = document.querySelector('.js-main-header');
 const header = document.querySelector('.js-header');
 const headerH = header.offsetHeight;
 
@@ -12,7 +13,7 @@ btn.addEventListener('click', function () {
     menu.classList.toggle('open')
     logoBox.classList.toggle('visible');
     phone.classList.toggle('no-side');
-    header.classList.toggle('header-bg')
+    header.classList.toggle('header-bg');
 })
 
 document.addEventListener('click', (e) => {
@@ -23,16 +24,26 @@ document.addEventListener('click', (e) => {
         menuList.classList.remove("open");
         logoBox.classList.remove('visible');
         phone.classList.remove('no-side');
-        header.classList.remove('header-bg')
+        header.classList.remove('header-bg');
     }
 })
 
 
 document.addEventListener('scroll', function () {
-    if (scrollY >= headerH) {
-        header.classList.add('header_fixed')
-    } else {
-        header.classList.remove('header_fixed')
+    if (mainHeader !== null) {
+        if (scrollY >= headerH) {
+            mainHeader.classList.add('header_fixed');
+        }
+        else {
+            mainHeader.classList.remove('header_fixed');
+        }
+    }
+    else if (scrollY >= 30) {
+        header.classList.add('header_fixed');
+        console.log(headerH);
+    }
+    else {
+        header.classList.remove('header_fixed');
     }
 })
 
