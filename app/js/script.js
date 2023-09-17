@@ -31,10 +31,8 @@ document.addEventListener('click', (e) => {
 document.addEventListener('scroll', function () {
     if (scrollY >= headerH) {
         header.classList.add('header_fixed')
-        // logoBox.classList.replace('visible', 'hidden')
     } else {
         header.classList.remove('header_fixed')
-        // logoBox.classList.remove('hidden')
     }
 })
 

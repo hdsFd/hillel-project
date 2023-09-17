@@ -10,11 +10,9 @@
     width: 100%;
     transition-duration: 500ms;
     transition-property: background-color;
-
     &.header-bg {
         background-color: rgba($main-regular, 0.8);
     }
-
     &_fixed {
         .header__info {
             background-color: rgba($main-regular, 0.8);
@@ -118,7 +116,6 @@
             visibility: visible;
         }
     }
-
     &__logo-box-page {
         display: none;
         font-size: 20px;
@@ -227,7 +224,6 @@
         &__logo-box-page {
             font-size: 36px;
         }
-
         &__logo-box-page::before {
             background-size: 21px 47px;
             width: 21px;
@@ -268,7 +264,6 @@
                     position: static;
                 }
             }
-
             .header__info {
                 transform: translate(0, 100%);
                 width: max-content;

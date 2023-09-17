@@ -6,27 +6,26 @@
         );
     border-radius: 0 0 12px 12px;
     position: relative;
-}
-
-.gradient::after {
-    content: "";
-    border-radius: 0 0 12px 12px;
-    background: #cacadb;
-    height: 10px;
-    position: absolute;
-    left: 20px;
-    right: 20px;
-    bottom: -10px;
-}
-.gradient::before {
-    content: "";
-    border-radius: 0 0 12px 12px;
-    background: #e7e7f2;
-    height: 10px;
-    position: absolute;
-    left: 40px;
-    bottom: -20px;
-    width: calc(100% - 80px);
+    &::after {
+        content: "";
+        border-radius: 0 0 12px 12px;
+        background: #cacadb;
+        height: 10px;
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: -10px;
+    }
+    &::before {
+        content: "";
+        border-radius: 0 0 12px 12px;
+        background: #e7e7f2;
+        height: 10px;
+        position: absolute;
+        left: 40px;
+        bottom: -20px;
+        width: calc(100% - 80px);
+    }
 }
 
 @media (min-width: 768px) {

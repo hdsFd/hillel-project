@@ -12,7 +12,6 @@
             margin-bottom: 30px;
         }
     }
-
     &__adress {
         font-size: 16px;
         line-height: normal;
@@ -32,18 +31,15 @@
             color: $accent;
         }
     }
-
     &__contacts {
         padding-top: 21px;
         padding-bottom: 30px;
         display: grid;
         grid-gap: 10px;
     }
-
     &__fb:hover &__fb-svg .icon-color {
         fill: $accent;
     }
-
     &__phone {
         color: $main-alt;
     }

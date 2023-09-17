@@ -16,7 +16,6 @@
         border-radius: 50%;
         transition-duration: 300ms;
         transition-property: border-color;
-
         &::before,
         &::after {
             content: "";

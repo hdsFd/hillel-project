@@ -167,7 +167,6 @@ a {
   border-radius: 0 0 12px 12px;
   position: relative;
 }
-
 .gradient::after {
   content: "";
   border-radius: 0 0 12px 12px;
@@ -178,7 +177,6 @@ a {
   right: 20px;
   bottom: -10px;
 }
-
 .gradient::before {
   content: "";
   border-radius: 0 0 12px 12px;
@@ -434,7 +432,6 @@ a {
   -webkit-transition-property: bottom;
   transition-property: bottom;
 }
-
 .menu__list {
   display: grid;
   grid-gap: 15px;
@@ -460,7 +457,6 @@ a {
   padding-bottom: 100%;
   background-color: rgba(255, 255, 255, 0.7);
 }
-
 .menu__link {
   color: #24a3ff;
   font-size: 24px;
@@ -486,7 +482,6 @@ a {
 .menu__link.active {
   color: #f0145a;
 }
-
 .menu__btn {
   cursor: pointer;
   background-color: transparent;
