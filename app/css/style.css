@@ -440,8 +440,8 @@ a {
   margin-top: 14px;
   list-style: none;
   position: fixed;
-  right: -100vw;
-  width: 100vw;
+  right: -100%;
+  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

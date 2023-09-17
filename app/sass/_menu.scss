@@ -12,8 +12,8 @@
         margin-top: 14px;
         list-style: none;
         position: fixed;
-        right: -100vw;
-        width: 100vw;
+        right: -100%;
+        width: 100%;
         flex-direction: column;
         transition-duration: 300ms;
         transition-property: right, visibility, padding-bottom;
