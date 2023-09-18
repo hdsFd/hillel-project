@@ -131,6 +131,7 @@
         }
     }
     &__logo {
+        background-image: url('../img/logo_white.svg');
         transition-duration: 500ms;
         transition-property: width, height;
     }
@@ -153,8 +154,16 @@
                 background-color: $grey-bg;
             }
         }
-        .header__adress {
+        .header__adress,
+        .header__phone {
             color: $grey-text;
+        }
+        .header__logo {
+            background-image: url('../img/logo.svg');
+        }
+        .header__menu-hamb .icon-color,
+        .header__menu-close .icon-color {
+            stroke: $main-regular;
         }
         .header__menu-list.open {
             background-color: rgba($basic-white, 0.8);

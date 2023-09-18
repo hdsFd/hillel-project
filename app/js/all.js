@@ -4025,6 +4025,7 @@ var logoBox = document.querySelector('.js-logo-box');
 var phone = document.querySelector('.js-phone');
 var mainHeader = document.querySelector('.js-main-header');
 var header = document.querySelector('.js-header');
+var gradient = document.querySelector('.js-gradient');
 var headerH = header.offsetHeight;
 btn.addEventListener('click', function () {
   btn.classList.toggle('active');
@@ -4045,8 +4046,8 @@ document.addEventListener('click', function (e) {
     header.classList.remove('header-bg');
   }
 });
-document.addEventListener('scroll', function () {
-  if (mainHeader !== null) {
+var headerScroll = function headerScroll() {
+  if (mainHeader) {
     if (scrollY >= headerH) {
       mainHeader.classList.add('header_fixed');
     } else {
@@ -4058,6 +4059,21 @@ document.addEventListener('scroll', function () {
   } else {
     header.classList.remove('header_fixed');
   }
+};
+var gradientScroll = function gradientScroll() {
+  if (gradient) {
+    var gradientH = gradient.offsetHeight;
+    console.log(gradientH);
+    if (scrollY >= gradientH - headerH) {
+      header.classList.add('header_white-theme');
+    } else {
+      header.classList.remove('header_white-theme');
+    }
+  }
+};
+document.addEventListener('scroll', function () {
+  headerScroll();
+  gradientScroll();
 });
 $('.js-team-slider').slick({
   slidesToShow: 1,

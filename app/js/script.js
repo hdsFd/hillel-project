@@ -5,6 +5,7 @@ const logoBox = document.querySelector('.js-logo-box');
 const phone = document.querySelector('.js-phone');
 const mainHeader = document.querySelector('.js-main-header');
 const header = document.querySelector('.js-header');
+const gradient = document.querySelector('.js-gradient');
 const headerH = header.offsetHeight;
 
 btn.addEventListener('click', function () {
@@ -28,23 +29,38 @@ document.addEventListener('click', (e) => {
     }
 })
 
-
-document.addEventListener('scroll', function () {
-    if (mainHeader !== null) {
+const headerScroll = () => {
+    if (mainHeader) {
         if (scrollY >= headerH) {
             mainHeader.classList.add('header_fixed');
         }
         else {
             mainHeader.classList.remove('header_fixed');
         }
-    }
-    else if (scrollY >= 30) {
+    } else if (scrollY >= 30) {
         header.classList.add('header_fixed');
         console.log(headerH);
-    }
-    else {
+    } else {
         header.classList.remove('header_fixed');
     }
+}
+
+const gradientScroll = () => {
+    if (gradient) {
+        const gradientH = gradient.offsetHeight;
+        console.log(gradientH);
+        if (scrollY >= (gradientH - headerH)) {
+            header.classList.add('header_white-theme');
+        } else {
+            header.classList.remove('header_white-theme');
+        }
+    }
+
+}
+
+document.addEventListener('scroll', function () {
+    headerScroll();
+    gradientScroll();
 })
 
 $('.js-team-slider').slick({

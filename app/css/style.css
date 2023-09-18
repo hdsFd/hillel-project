@@ -323,9 +323,6 @@ a {
   -webkit-transition-property: color;
   transition-property: color;
 }
-.phone_grey {
-  color: #b3b3ba;
-}
 .phone:hover {
   color: #f0145a;
 }
@@ -355,9 +352,6 @@ a {
   height: 33px;
   background-image: url("../img/logo.svg");
   background-repeat: no-repeat;
-}
-.logo_white {
-  background-image: url("../img/logo_white.svg");
 }
 
 .my-dots {
@@ -764,6 +758,7 @@ a {
   display: flex;
 }
 .header__logo {
+  background-image: url("../img/logo_white.svg");
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-property: width, height;
@@ -787,8 +782,16 @@ a {
 .header_white-theme .header__lang-link:hover:not(.active) {
   background-color: #f5f5fa;
 }
-.header_white-theme .header__adress {
+.header_white-theme .header__adress,
+.header_white-theme .header__phone {
   color: #b3b3ba;
+}
+.header_white-theme .header__logo {
+  background-image: url("../img/logo.svg");
+}
+.header_white-theme .header__menu-hamb .icon-color,
+.header_white-theme .header__menu-close .icon-color {
+  stroke: #323264;
 }
 .header_white-theme .header__menu-list.open {
   background-color: rgba(255, 255, 255, 0.8);

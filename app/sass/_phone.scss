@@ -4,9 +4,6 @@
     line-height: normal;
     transition-duration: 300ms;
     transition-property: color;
-    &_grey {
-        color: $grey-text;
-    }
     &:hover {
         color: $accent;
     }
