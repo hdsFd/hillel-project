@@ -16,7 +16,7 @@
         width: 100%;
         flex-direction: column;
         transition-duration: 300ms;
-        transition-property: right, visibility, padding-bottom;
+        transition-property: right, visibility, padding-bottom, background-color;
         &.open {
             right: 0;
             visibility: visible;
@@ -94,6 +94,9 @@
             position: static;
             visibility: visible;
             width: 100%;
+            &.open {
+                padding-bottom: 0;
+            }
         }
         &__link {
             padding: 0 0 3px;
@@ -101,9 +104,6 @@
             border-bottom: 2px solid transparent;
             border-radius: 0;
             font-size: 16px;
-            &_white:not(.active) {
-                color: $basic-white;
-            }
             &.active {
                 border-color: $accent;
             }

@@ -8,7 +8,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    transition-duration: 500ms;
+    transition-duration: 300ms;
     transition-property: background-color;
     &.header-bg {
         background-color: rgba($main-regular, 0.8);
@@ -131,7 +131,7 @@
         }
     }
     &__logo {
-        background-image: url('../img/logo_white.svg');
+        background-image: url("../img/logo_white.svg");
         transition-duration: 500ms;
         transition-property: width, height;
     }
@@ -159,11 +159,14 @@
             color: $grey-text;
         }
         .header__logo {
-            background-image: url('../img/logo.svg');
+            background-image: url("../img/logo.svg");
         }
         .header__menu-hamb .icon-color,
         .header__menu-close .icon-color {
             stroke: $main-regular;
+        }
+        .header__menu-link:not(.active) {
+            color: $active-regular;
         }
         .header__menu-list.open {
             background-color: rgba($basic-white, 0.8);
@@ -207,6 +210,12 @@
         }
         &__menu-list {
             margin: 0;
+            &.open {
+                background-color: transparent;
+            }
+        }
+        &__menu-link:not(.active) {
+            color: $basic-white;
         }
         &__info {
             position: static;
@@ -281,6 +290,9 @@
             }
             &.header_fixed {
                 background-color: $grey-bg;
+            }
+            .header__menu-list.open  {
+                background-color: transparent;
             }
         }
     }

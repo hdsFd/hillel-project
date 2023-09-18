@@ -4055,7 +4055,6 @@ var headerScroll = function headerScroll() {
     }
   } else if (scrollY >= 30) {
     header.classList.add('header_fixed');
-    console.log(headerH);
   } else {
     header.classList.remove('header_fixed');
   }
@@ -4063,7 +4062,6 @@ var headerScroll = function headerScroll() {
 var gradientScroll = function gradientScroll() {
   if (gradient) {
     var gradientH = gradient.offsetHeight;
-    console.log(gradientH);
     if (scrollY >= gradientH - headerH) {
       header.classList.add('header_white-theme');
     } else {
