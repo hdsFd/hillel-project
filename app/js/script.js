@@ -39,7 +39,6 @@ const headerScroll = () => {
         }
     } else if (scrollY >= 30) {
         header.classList.add('header_fixed');
-        console.log(headerH);
     } else {
         header.classList.remove('header_fixed');
     }
@@ -48,7 +47,6 @@ const headerScroll = () => {
 const gradientScroll = () => {
     if (gradient) {
         const gradientH = gradient.offsetHeight;
-        console.log(gradientH);
         if (scrollY >= (gradientH - headerH)) {
             header.classList.add('header_white-theme');
         } else {
