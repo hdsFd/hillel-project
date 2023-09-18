@@ -33,6 +33,7 @@
         display: flex;
         justify-content: center;
         border-radius: 12px;
+        -webkit-tap-highlight-color: transparent;
         transition-duration: 300ms;
         transition-property: background-color, color, border-color;
         &:hover,
