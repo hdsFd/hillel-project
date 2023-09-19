@@ -122,6 +122,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .body {
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 400;
@@ -464,6 +468,7 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 12px;
+  -webkit-tap-highlight-color: transparent;
   -webkit-transition-duration: 300ms;
           transition-duration: 300ms;
   -webkit-transition-property: background-color, color, border-color;
@@ -885,7 +890,7 @@ a {
   }
   .header_fixed {
     grid-gap: 10px;
-    padding: 10px 15px;
+    padding: 6px 15px;
     background-color: rgba(50, 50, 100, 0.8);
     justify-items: end;
     -webkit-box-align: center;
@@ -1643,6 +1648,12 @@ a {
   grid-gap: 10px;
   justify-items: center;
 }
+.footer__fb-svg .icon-color {
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+}
 .footer__fb:hover .footer__fb-svg .icon-color {
   fill: #f0145a;
 }
@@ -1666,6 +1677,93 @@ a {
   font-size: 16px;
   line-height: normal;
   color: #b3b3ba;
+}
+.footer__map-iframe-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0 31px;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation-name: hidden;
+          animation-name: hidden;
+  -webkit-animation-duration: 200ms;
+          animation-duration: 200ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.footer__map-iframe-wrap.visible {
+  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+  -webkit-animation-name: visible;
+          animation-name: visible;
+}
+.footer__map-iframe-inner {
+  width: 100%;
+  height: 70%;
+  border: 3px solid #46466e;
+  -webkit-box-shadow: 0 0px 3px 3px rgba(50, 50, 100, 0.8);
+          box-shadow: 0 0px 3px 3px rgba(50, 50, 100, 0.8);
+  position: relative;
+}
+.footer__map-iframe-btn {
+  cursor: pointer;
+  border: none;
+  background: #ffffff;
+  padding: 0;
+  font-size: 0;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  padding: 4px;
+  -webkit-box-shadow: 0 0px 3px 4px rgba(50, 50, 100, 0.8);
+          box-shadow: 0 0px 3px 4px rgba(50, 50, 100, 0.8);
+  border-radius: 0 0 0 4px;
+}
+.footer__map-iframe-btn:hover .footer__map-iframe-close .icon-color {
+  stroke: #000000;
+}
+@keyframes hidden {
+  0% {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes visible {
+  0% {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 @media (min-width: 768px) {

@@ -38,6 +38,10 @@
         grid-gap: 10px;
         justify-items: center;
     }
+    &__fb-svg .icon-color {
+        transition-duration: 300ms;
+        transition-property: fill;
+    }
     &__fb:hover &__fb-svg .icon-color {
         fill: $accent;
     }
@@ -59,6 +63,74 @@
         font-size: 16px;
         line-height: normal;
         color: $grey-text;
+    }
+    &__map-iframe-wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 0 31px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        animation-name: hidden;
+        animation-duration: 200ms;
+        animation-fill-mode: both;
+        &.visible {
+            z-index: 99;
+            display: flex;
+            animation-delay: 300ms;
+            animation-name: visible;
+        }
+    }
+    &__map-iframe-inner {
+        width: 100%;
+        height: 70%;
+        border: 3px solid $main-alt;
+        box-shadow: 0 0px 3px 3px rgba(50, 50, 100, 0.8);
+        position: relative;
+    }
+    &__map-iframe-btn {
+        cursor: pointer;
+        border: none;
+        background: $basic-white;
+        padding: 0;
+        font-size: 0;
+        position: absolute;
+        right: 0px;
+        top: 0;
+        padding: 4px;
+        box-shadow: 0 0px 3px 4px rgba(50, 50, 100, 0.8);
+        border-radius: 0 0 0 4px;
+    }
+    &__map-iframe-btn:hover &__map-iframe-close .icon-color {
+        stroke: $basic-black;
+    }
+    @keyframes hidden {
+        0% {
+            display: flex;
+            opacity: 1;
+            visibility: visible;
+        }
+        100% {
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    @keyframes visible {
+        0% {
+            display: flex;
+            opacity: 0;
+            visibility: hidden;
+        }
+        100% {
+            display: flex;
+            opacity: 1;
+            visibility: visible;
+        }
     }
 }
 

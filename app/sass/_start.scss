@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .body {
     font-family: "Montserrat", "Arial", sans-serif;
     font-weight: 400;

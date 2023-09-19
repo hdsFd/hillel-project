@@ -1,4 +1,4 @@
-const btn = document.querySelector('.js-menu-btn');
+const menuBtn = document.querySelector('.js-menu-btn');
 const menu = document.querySelector('.js-menu');
 const menuList = document.querySelector('.js-menu-list');
 const logoBox = document.querySelector('.js-logo-box');
@@ -7,9 +7,12 @@ const mainHeader = document.querySelector('.js-main-header');
 const header = document.querySelector('.js-header');
 const gradient = document.querySelector('.js-gradient');
 const headerH = header.offsetHeight;
+const mapLink = document.querySelector('.js-map-link');
+const iframeMap = document.querySelector('.js-iframe-map');
+const iframeBtn = document.querySelector('.js-iframe-btn');
 
-btn.addEventListener('click', function () {
-    btn.classList.toggle('active');
+menuBtn.addEventListener('click', function () {
+    menuBtn.classList.toggle('active');
     menuList.classList.toggle('open');
     menu.classList.toggle('open')
     logoBox.classList.toggle('visible');
@@ -18,15 +21,24 @@ btn.addEventListener('click', function () {
 })
 
 document.addEventListener('click', (e) => {
-    const click = e.composedPath().includes(btn);
-    if (!click) {
-        btn.classList.remove("active");
+    const menuClick = e.composedPath().includes(menuBtn);
+    if (!menuClick) {
+        menuBtn.classList.remove("active");
         menu.classList.remove("open");
         menuList.classList.remove("open");
         logoBox.classList.remove('visible');
         phone.classList.remove('no-side');
         header.classList.remove('header-bg');
     }
+})
+
+mapLink.addEventListener('click', function () {
+    iframeMap.classList.toggle('visible')
+
+})
+
+iframeBtn.addEventListener('click', function () {
+    iframeMap.classList.toggle('visible')
 })
 
 const headerScroll = () => {
