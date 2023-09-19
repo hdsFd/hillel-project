@@ -1693,10 +1693,10 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-animation-name: hidden;
-          animation-name: hidden;
   -webkit-animation-duration: 200ms;
           animation-duration: 200ms;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -1705,8 +1705,6 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
   -webkit-animation-name: visible;
           animation-name: visible;
 }
@@ -1734,20 +1732,6 @@ a {
 }
 .footer__map-iframe-btn:hover .footer__map-iframe-close .icon-color {
   stroke: #000000;
-}
-@keyframes hidden {
-  0% {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    opacity: 1;
-    visibility: visible;
-  }
-  100% {
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-  }
 }
 @keyframes visible {
   0% {

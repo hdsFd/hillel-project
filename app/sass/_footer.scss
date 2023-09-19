@@ -75,13 +75,12 @@
         display: none;
         align-items: center;
         justify-content: center;
-        animation-name: hidden;
         animation-duration: 200ms;
+        animation-delay: 300ms;
         animation-fill-mode: both;
         &.visible {
             z-index: 99;
             display: flex;
-            animation-delay: 300ms;
             animation-name: visible;
         }
     }
@@ -107,18 +106,6 @@
     }
     &__map-iframe-btn:hover &__map-iframe-close .icon-color {
         stroke: $basic-black;
-    }
-    @keyframes hidden {
-        0% {
-            display: flex;
-            opacity: 1;
-            visibility: visible;
-        }
-        100% {
-            display: none;
-            opacity: 0;
-            visibility: hidden;
-        }
     }
     @keyframes visible {
         0% {
