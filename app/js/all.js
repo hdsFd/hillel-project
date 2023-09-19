@@ -4055,6 +4055,12 @@ mapLink.addEventListener('click', function () {
 iframeBtn.addEventListener('click', function () {
   iframeMap.classList.toggle('visible');
 });
+iframeMap.addEventListener('click', function (e) {
+  var mapClose = e.composedPath().includes(iframeBtn);
+  if (!mapClose) {
+    iframeMap.classList.remove('visible');
+  }
+});
 var headerScroll = function headerScroll() {
   if (mainHeader) {
     if (scrollY >= headerH) {

@@ -41,6 +41,13 @@ iframeBtn.addEventListener('click', function () {
     iframeMap.classList.toggle('visible')
 })
 
+iframeMap.addEventListener('click', (e) => {
+    const mapClose = e.composedPath().includes(iframeBtn);
+    if (!mapClose) {
+        iframeMap.classList.remove('visible')
+    }
+})
+
 const headerScroll = () => {
     if (mainHeader) {
         if (scrollY >= headerH) {
