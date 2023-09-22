@@ -158,6 +158,9 @@
         .header__phone {
             color: $grey-text;
         }
+        .header__phone:hover {
+            color: $accent;
+        }
         .header__logo {
             background-image: url("../img/logo.svg");
         }

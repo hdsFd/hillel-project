@@ -791,6 +791,9 @@ a {
 .header_white-theme .header__phone {
   color: #b3b3ba;
 }
+.header_white-theme .header__phone:hover {
+  color: #f0145a;
+}
 .header_white-theme .header__logo {
   background-image: url("../img/logo.svg");
 }
